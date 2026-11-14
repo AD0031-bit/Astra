@@ -8,7 +8,7 @@ public class OxygenLeak extends Event {
 
         System.out.println("WARNING! OXYGEN LEAK DETECTED!");
 
-        colony.changeResource("Oxygen", -20);
+        colony.adjustResource(Colony.OXYGEN, -20);
 
         System.out.println("Oxygen reduced by 20 units!");
 

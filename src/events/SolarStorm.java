@@ -8,7 +8,7 @@ public class SolarStorm extends Event {
 
         System.out.println("WARNING! SOLAR STORM DETECTED!");
 
-        colony.changeResource("Energy", -25);
+        colony.adjustResource(Colony.ENERGY, -25);
 
         System.out.println("Energy reduced by 25 units!");
 

@@ -8,15 +8,15 @@ public class MeteorImpact extends Event {
 
         System.out.println("WARNING! METEOR IMPACT DETECTED!");
 
-        colony.changeResource("Metal", -15);
+       colony.adjustResource(Colony.METAL, -15);
 
         System.out.println("Metal reduced by 15 units!");
 
-        colony.changeResource("Oxygen", -10);
+        colony.adjustResource(Colony.OXYGEN, -10);
 
         System.out.println("Oxygen reduced by 10 units!");
 
-        colony.changeMorale(-5);
+        colony.adjustMorale(-5);
 
         System.out.println("Colony morale reduced by 5!");
 

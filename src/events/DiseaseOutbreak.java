@@ -8,11 +8,11 @@ public class DiseaseOutbreak extends Event {
 
         System.out.println("WARNING! DISEASE OUTBREAK DETECTED!");
 
-        colony.changePopulation(-2);
+        colony.adjustPopulation(-2);
 
         System.out.println("2 colonists have been lost!");
 
-        colony.changeMorale(-10);
+        colony.adjustMorale(-10);
 
         System.out.println("Colony morale reduced by 10!");
 
