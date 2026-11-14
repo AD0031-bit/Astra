@@ -1,6 +1,4 @@
-
 package core;
-
 import interfaces.ResourceProducer;
 
 public class Building implements ResourceProducer {
@@ -23,9 +21,9 @@ public class Building implements ResourceProducer {
 
     public void construct(Colony colony) {
 
-        if (colony.getResource("Metal") >= constructionCost) {
+        if (colony.getResource(Colony.METAL) >= constructionCost) {
 
-            colony.changeResource("Metal", -constructionCost);
+            colony.adjustResource(Colony.METAL, -constructionCost);
             constructed = true;
 
             System.out.println(name + " constructed successfully!");
@@ -39,7 +37,7 @@ public class Building implements ResourceProducer {
     public void produce(Colony colony) {
 
         if (constructed) {
-            colony.changeResource(resourceProduced, productionAmount);
+            colony.adjustResource(resourceProduced, productionAmount);
 
             System.out.println(name + " produced "
                     + productionAmount + " " + resourceProduced);
